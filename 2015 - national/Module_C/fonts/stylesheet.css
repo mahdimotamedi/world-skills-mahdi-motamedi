@@ -1,0 +1,24 @@
+@font-face {
+    font-family: WebMitra;
+    src: url(WebMitra.woff) format('woff');
+}
+
+@font-face {
+    font-family: WebMitraBold;
+    src: url('webMitraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: WebYekan;
+    src: url('WebYekan.woff') format('woff');
+}
+
+@font-face {
+    font-family: IRRoya;
+    src: url('IRRoya.woff') format('woff');
+}
+
+@font-face {
+    font-family: IRRoyaBold;
+    src: url('IRRoyaBold.woff') format('woff');
+}

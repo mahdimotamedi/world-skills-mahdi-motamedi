@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FunnyAvatar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+</head>
+<body>
+	
+	<section class="main">
+		<header>
+			<h1>FunnyAvatar.com</h1>
+			<input type="button" value="Upload (New)" onclick="upload_picture()" />
+			<input type="button" value="Recent Avatars" onclick="recent_avatars()" />
+			<input type="button" value="Save" onclick="save_pic()" />
+			<input type="button" value="Export as JPEG" onclick="export_as_jpeg()" />
+			<input type="button" value="clear storage" onclick="localStorage.clear();" />
+		</header>
+		<section class="canvas" id="main_canvas">
+			
+		</section>
+	</section>
+	<aside>
+		<ul class="main">
+			<li id="beard_m" data-sub="beard" class="active">Beard</li>
+			<li id="eyebrows_m" data-sub="eyebrows">Eyebrow</li>
+			<li id="eyes_m" data-sub="eyes">Eye</li>
+			<li id="glasses_m" data-sub="glasses">Glasses</li>
+			<li id="hat_m" data-sub="hat">Hat</li>
+			<li id="moustache_m" data-sub="moustache">Moustache</li>
+			<li id="mouth_m" data-sub="mouth">Mouth</li>
+		</ul>
+		<ul class="sub">
+			<li class="items" id="beard" style="display:block">
+				<img src="images/Beard/01.png" width="70" />
+				<img src="images/Beard/02.png" width="70" />
+				<img src="images/Beard/03.png" width="70" />
+				
+			</li>
+			<li class="items" id="eyebrows">
+				<img src="images/Eyebrows/01.png" width="70" />
+				<img src="images/Eyebrows/02.png" width="70" />
+				<img src="images/Eyebrows/03.png" width="70" />
+				<img src="images/Eyebrows/04.png" width="70" />
+				<img src="images/Eyebrows/05.png" width="70" />
+				<img src="images/Eyebrows/06.png" width="70" />
+				<img src="images/Eyebrows/07.png" width="70" />
+				<img src="images/Eyebrows/08.png" width="70" />
+				<img src="images/Eyebrows/09.png" width="70" />
+				<img src="images/Eyebrows/10.png" width="70" />
+				<img src="images/Eyebrows/11.png" width="70" />
+				<img src="images/Eyebrows/12.png" width="70" />
+				<img src="images/Eyebrows/13.png" width="70" />
+				<img src="images/Eyebrows/14.png" width="70" />
+				<img src="images/Eyebrows/15.png" width="70" />
+				<img src="images/Eyebrows/16.png" width="70" />
+				<img src="images/Eyebrows/17.png" width="70" />
+				<img src="images/Eyebrows/18.png" width="70" />
+			</li>
+			<li class="items" id="eyes">
+				<img src="images/Eyes/01.png" width="70" />
+				<img src="images/Eyes/02.png" width="70" />
+				<img src="images/Eyes/03.png" width="70" />
+				<img src="images/Eyes/04.png" width="70" />
+				<img src="images/Eyes/05.png" width="70" />
+				<img src="images/Eyes/06.png" width="70" />
+				<img src="images/Eyes/07.png" width="70" />
+				<img src="images/Eyes/08.png" width="70" />
+				<img src="images/Eyes/09.png" width="70" />
+				<img src="images/Eyes/10.png" width="70" />
+				<img src="images/Eyes/11.png" width="70" />
+				<img src="images/Eyes/12.png" width="70" />
+				<img src="images/Eyes/13.png" width="70" />
+				<img src="images/Eyes/14.png" width="70" />
+				<img src="images/Eyes/15.png" width="70" />
+				<img src="images/Eyes/16.png" width="70" />
+				<img src="images/Eyes/17.png" width="70" />
+				<img src="images/Eyes/18.png" width="70" />
+			</li>
+			<li class="items" id="glasses">
+				<img src="images/Glasses/01.png" width="70" />
+				<img src="images/Glasses/02.png" width="70" />
+				<img src="images/Glasses/03.png" width="70" />
+				<img src="images/Glasses/04.png" width="70" />
+				<img src="images/Glasses/05.png" width="70" />
+				<img src="images/Glasses/06.png" width="70" />
+				<img src="images/Glasses/07.png" width="70" />
+				<img src="images/Glasses/08.png" width="70" />
+				<img src="images/Glasses/09.png" width="70" />
+				<img src="images/Glasses/10.png" width="70" />
+				<img src="images/Glasses/11.png" width="70" />
+				<img src="images/Glasses/12.png" width="70" />
+			</li>
+			<li class="items" id="hat">
+				<img src="images/Hat/01.png" width="70" />
+				<img src="images/Hat/02.png" width="70" />
+				<img src="images/Hat/03.png" width="70" />
+			</li>
+			<li class="items" id="moustache">
+				<img src="images/Moustache/01.png" width="70" />
+				<img src="images/Moustache/02.png" width="70" />
+				<img src="images/Moustache/03.png" width="70" />
+				<img src="images/Moustache/04.png" width="70" />
+				<img src="images/Moustache/05.png" width="70" />
+				<img src="images/Moustache/06.png" width="70" />
+				<img src="images/Moustache/07.png" width="70" />
+				<img src="images/Moustache/08.png" width="70" />
+				<img src="images/Moustache/09.png" width="70" />
+				<img src="images/Moustache/10.png" width="70" />
+				<img src="images/Moustache/11.png" width="70" />
+				<img src="images/Moustache/12.png" width="70" />
+			</li>
+			<li class="items" id="mouth">
+				<img src="images/Mouth/01.png" width="70" />
+				<img src="images/Mouth/02.png" width="70" />
+				<img src="images/Mouth/03.png" width="70" />
+				<img src="images/Mouth/04.png" width="70" />
+				<img src="images/Mouth/05.png" width="70" />
+				<img src="images/Mouth/06.png" width="70" />
+				<img src="images/Mouth/07.png" width="70" />
+				<img src="images/Mouth/08.png" width="70" />
+				<img src="images/Mouth/09.png" width="70" />
+				<img src="images/Mouth/10.png" width="70" />
+			</li>
+		</ul>
+	</aside>
+	<div class="list_saved_files" style="display: none;">
+		<h2>list of recent avatars</h2>
+		<ul></ul>
+		<a href="#" onclick="$(this).parent().slideUp(200)">close</a>
+	</div>
+	<div class="save_file popup" style="display: none;">
+		<h2>save file form</h2>
+		<p><input type="text" placeholder="Avatar Name" id="name_of_file"></p>
+		<p>
+			<input type="button" value="Save" onclick="save_to_localStorage()">
+			<input type="button" value="Cancel" onclick="$(this).parent().parent().fadeOut(200);">
+		</p>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="functions.js"></script>
+	<script src="g.js"></script>
+	<script>
+	$("ul.main li").click(function(){
+		$("ul.main li").removeClass('active');
+		$(this).addClass('active');
+		i=$(this).attr('data-sub');
+		$("li.items").hide();
+		$("li.items#"+i).show();
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@media screen and (min-width: 400px) {
+    .row {
+        margin: 0 3%;
+    }
+    .small_1 {
+        width: 8.3333333%;
+    }
+    .small_2 {
+        width: 16.66666666%;
+    }
+    .small_3 {
+        width: 25%;
+    }
+    .small_4 {
+        width: 33.3333333%;
+    }
+    .small_5 {
+        width: 41.6666666%;
+    }
+    .small_6 {
+        width: 50%;
+    }
+    .small_7 {
+        width: 58.333333%;
+    }
+    .small_8 {
+        width: 66.666666%;
+    }
+    .small_9 {
+        width: 75%;
+    }
+    .small_10 {
+        width: 83.3333333%;
+    }
+    .small_11 {
+        width: 91.6666666%;
+    }
+
+    .vertical_on_medium li {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .row {
+        margin: 0 5%;
+    }
+    .medium_1 {
+        width: 8.3333333%;
+    }
+    .medium_2 {
+        width: 16.66666666%;
+    }
+    .medium_3 {
+        width: 25%;
+    }
+    .medium_4 {
+        width: 33.3333333%;
+    }
+    .medium_5 {
+        width: 41.6666666%;
+    }
+    .medium_6 {
+        width: 50%;
+    }
+    .medium_7 {
+        width: 58.333333%;
+    }
+    .medium_8 {
+        width: 66.666666%;
+    }
+    .medium_9 {
+        width: 75%;
+    }
+    .medium_10 {
+        width: 83.3333333%;
+    }
+    .medium_11 {
+        width: 91.6666666%;
+    }
+
+    .vertical_on_medium li {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .row {
+        margin: 0 10%;
+    }
+    .large_1 {
+        width: 8.3333333%;
+    }
+    .large_2 {
+        width: 16.66666666%;
+    }
+    .large_3 {
+        width: 25%;
+    }
+    .large_4 {
+        width: 33.3333333%;
+    }
+    .large_5 {
+        width: 41.6666666%;
+    }
+    .large_6 {
+        width: 50%;
+    }
+    .large_7 {
+        width: 58.333333%;
+    }
+    .large_8 {
+        width: 66.666666%;
+    }
+    .large_9 {
+        width: 75%;
+    }
+    .large_10 {
+        width: 83.3333333%;
+    }
+    .large_11 {
+        width: 91.6666666%;
+    }
+
+    .vertical_on_medium li {
+        float: right;
+    }
+}

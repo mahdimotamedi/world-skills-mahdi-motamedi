@@ -1,0 +1,76 @@
+/* import fonts */
+@import "../fonts/stylesheet.css";
+
+/* css reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    line-height: 1;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* routine items */
+.row {
+    clear: both;
+}
+
+.column {
+    float: right;
+    padding: 0 10px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, select {
+    width: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-center {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.spacer {
+    clear: both;
+}

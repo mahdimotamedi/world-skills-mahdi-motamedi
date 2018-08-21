@@ -1,0 +1,141 @@
+html{
+	height:100%;
+	width: 100%;
+}
+body{
+	padding:0;
+	margin:0;
+	font: 12px/18px tahoma;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+section.main{
+	width: calc(100% - 252px);
+	float: left;
+	background: url(images/canvasbg.png);
+	height: 100%;
+	z-index: 10;
+}
+section.main header h1{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	padding-left: 20px;
+	color: #592404;
+}
+section.main header{
+	height: 40px;
+	background: #d29a45;
+	line-height: 40px;
+}
+section.main header input{
+	background: #b56d00;
+	border: 1px solid #dfcaab;
+	padding: 5px 10px;
+	margin-left: 10px;
+}
+
+aside{
+	width: 250px;
+	float: right;
+	height: 100%;
+	background: #761723;
+}
+aside ul.main{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	margin-right: -52px;
+
+}
+aside ul.main > li{
+	padding: 0 10px 0 0;
+	margin: 0 -34px;
+	height: 30px;
+	width: 90px;
+	background: #d29a45;
+	font: 15px/30px arial;
+	text-align: right;
+	border-left: 10px;
+	float: left;
+	transform: rotate(90deg);
+	transform-origin: left top;
+	cursor: pointer;
+}
+aside ul.main > li:hover{
+	background: #b56d00;
+}
+aside ul.main > li.active{
+	background: #000;
+	color: #fff;
+}
+
+aside ul.sub{
+	list-style: none;
+	padding:0 15px;
+	margin:0;
+	margin-top: 120px;
+	height: calc(100% - 120px);
+	position: relative;
+}
+aside ul.sub > li{
+	overflow-y: scroll;
+	height: 100%;
+	background: #fff;
+	padding: 0 20px;
+	text-align: center;
+	display: none;
+}
+aside ul.sub > li > img{
+	display: block;
+	margin: 15px auto;
+	border: 1px solid #eee;
+	padding: 10px;
+	cursor: move;
+}
+
+aside ul.sub > li > img:hover{
+	border: 1px solid #ccc;
+}
+
+input[type='button'] {
+	cursor: pointer;
+}
+
+.canvas img {
+	cursor: move;
+}
+
+.canvas {
+	height: calc(100% - 40px);
+	z-index: 1;
+}
+
+.zIndex_top {
+	z-index: 9999999;
+}
+
+.list_saved_files {
+	background-color: #cccccc;
+	position: absolute;
+	top: 40px;
+	padding: 11px;
+}
+
+.popup {
+	background-color: rgba(0, 0, 0, .8);
+	border-radius: 5px;
+	position: fixed;
+	left: calc(50% - 150px);
+	top: calc(50% - 80px);
+	padding: 5px 12px;
+	color: #fff;
+}
+
+.list_saved_files li {
+	cursor: pointer;
+}

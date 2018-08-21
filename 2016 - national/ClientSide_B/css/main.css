@@ -1,0 +1,207 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	font-family: "Arial",sans-serif;
+	color: #282828;
+	text-decoration: none;
+	list-style-type: none;
+}
+body{
+	background: #009BBC;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+#game::after{
+	content: "";
+	display: block;
+	top: 100%;
+	position: absolute;
+	background: #038A4A;
+	height: 100px;
+	width: 100%;
+	z-index: -2;
+}
+#playground{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../imgs/ground.svg) no-repeat bottom left;
+	z-index: 10;
+}
+#game{
+	height: 635px;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top: -303px;
+	/*background: rgba(0,0,0,0.2);*/
+	display: block;
+	width: 5632px;
+}
+
+#points{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 5;
+}
+#points > section img{
+	margin: auto;
+	display: block;
+}
+#points > section{
+	float: left;
+	height: 430px;
+	/*width: 500px;*/
+	width: 14.285714285714285714285714285713%;
+}
+#points > #parana{
+	height: 472px;
+}
+#runner{
+	position: absolute;
+	bottom: 96px;
+	left: 0;
+	z-index: 40;
+}
+
+#runner img {
+	transition: transform .35s linear;
+}
+
+#runner.line1 img {
+	transform: scale(.91);
+}
+
+#runner.line2 img {
+	transform: scale(1);
+}
+
+#runner.line3 img {
+	transform: scale(1.09);
+}
+
+#pyre{
+	position: absolute;
+	right: 200px;
+	top: 40px;
+	z-index: 12;
+	height: 400px;
+  	width: 213px;
+}
+p{
+	margin-bottom: 10px;
+}
+h3{
+	text-transform: uppercase;
+	font-size: 33px;
+	text-align: center;
+	margin-bottom: 20px;	
+}
+
+
+#start,
+#end{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0, 78, 109, 0.7);
+	z-index: 20;
+}
+#start{
+	z-index: 50;
+}
+.btn-start{
+	display: block;
+	width: 100%;
+	height: 60px;
+}
+.box{
+	width: 440px;
+	height: 380px;
+	background: white;
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+	padding: 30px;
+}
+
+.hide{
+	display: none;
+}
+
+#panels{
+	position: absolute;
+	bottom: 144px;
+	left: 0px;
+	right: 0px;
+}
+.panel:first-child{
+	margin-left: 14.285714285714285714285714285713%;
+}
+.panel{
+	width: 14.285714285714285714285714285713%;
+	min-width: 267px;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	background: url(../imgs/panel.svg) no-repeat center;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.obstacle{
+	display: block;
+	background: url(../imgs/obstacle.svg) no-repeat center;
+	width: 28px;
+	height: 74px;
+}
+#runways{
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 60px;
+}
+
+#runways .obstacle {
+	position: absolute;
+}
+
+#runway1 .obstacle{
+	width: 16px;
+	height: 62px;
+	bottom: 48px;
+	z-index: 100;
+}
+#runway2 .obstacle{
+	width: 22px;
+	height: 68px;
+	bottom: 27px;
+	z-index: 200;
+}
+#runway3 .obstacle{
+	width: 28px;
+	height: 74px;
+	bottom: -2px;
+	z-index: 300;
+}
+
+.fade {
+	opacity: 0;
+}

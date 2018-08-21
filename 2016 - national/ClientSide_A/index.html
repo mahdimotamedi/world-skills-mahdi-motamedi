@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="US-en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<title>Custom Puzzle</title>
+</head>
+<body>
+
+	<!-- START -->
+	<div id="start">
+		<div class="box">
+			<h2>Welcome do Custom Puzzle!</h2>
+			<p>This game consists in you make your puzzle game (mahdi motamedi: <a href="http://mmprogrammer.ir" target="_blank">mmpg.ir</a> present)</p>
+			<form action="#" method="post">
+				<div class="group">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="group">
+					<label for="difficult">Difficult</label>
+					<select type="text" name="difficult" id="difficult" >
+						<option value="1">EASY</option>
+						<option value="2">MEDIUM</option>
+						<option value="3">HARD</option>
+					</select>
+				</div>
+				<!-- DROP -->
+				<div class="group" id="drop" ondrop="game.loadImage(event)">
+					<div class="preview">
+						<img src="imgs/example.jpg">
+					</div>
+					<p>Drop your photo here!</p>
+				</div><!-- END DROP -->
+				<div class="group">
+					<button type="submit" name="submit" onclick="game.start(); return false;">START</button>
+				</div>
+			</form>
+		</div>
+	</div><!-- END START -->
+
+	<!-- END -->
+	<div id="end" style="display: none;">
+		<div class="box">
+			<h3>Congratulations! You have solved the puzzle!</h3>
+			<p>You did it!</p>
+			<table>
+				<thead>
+					<tr>
+						<th>POSITION</th>
+						<th>LEVEL</th>
+						<th>NAME</th>
+						<th>TIME</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td colspan="4" class="center_text">Loading rankings from server...</td>
+				</tr>
+				</tbody>
+			</table>
+			<button class="btn btn-restart" onclick="game.restart(); return false;">RESTART APPLICATION</button>
+		</div>
+	</div><!-- END END -->
+
+	<!-- GAMECONTAINER -->
+	<div id="gameContainer">
+		<div class="container">
+			<!-- PLAYERNAME -->
+			<span id="playername">John Doe</span>
+			<!-- TIMER -->
+			<div id="timer" data-seconds="0">00:00</div>
+
+			<div id="puzzleContainer">
+				<!-- PUZZLE -->
+				<div id="puzzle">
+
+				</div>
+
+				<div id="puzzleDestination">
+
+				</div>
+			</div>
+
+			<div class="buttons">
+				<button class="btn btn-pause" onclick="game.pause();">PAUSE</button>
+				<button class="btn btn-restart" onclick="game.restart();">RESTART</button>
+			</div>
+		</div>
+	</div><!-- END GAMECONTAINER -->
+
+	<!-- SCRIPTS -->
+	<span id="scripts">
+    <script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+	<script type="text/javascript" src='js/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='js/objects.js'></script>
+	<script type="text/javascript" src='js/script.js'></script>
+	</span>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>Employees</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <script type="text/javascript" src="vendors/compiled-vendorsdf05.js?c=build-169"></script>
+  <link rel="stylesheet" type="text/css" href="css/globaldf05.css?c=build-169" />
+  <link type='text/css' rel='stylesheet'  href='vendors/jquery-ui/jquery-ui-1.10.4.custom.mindf05.css?c=build-169' />
+  <script type="text/javascript" src="vendors/jquery-ui/jquery-ui-1.10.4.custom.mindf05.js?c=build-169"></script>
+  <script type="text/javascript" src="js/globaldf05.js?c=build-169"></script>
+  <script type="text/javascript" src="js/commondf05.js?c=build-169"></script>
+</head>
+
+<body id="page-index" class="en">
+  
+  <div id="header-wrap">
+    <div id="header">
+      <h1>
+        <img src="img/7s-logo-round.png"  class="profile-avatar company-logo" />
+        
+        <div class="company-meta ">
+          <a href="employers.html">
+            User                        
+          </a>
+          <div class="welcome-user">
+            user@mail.ex
+          </div>
+        </div>
+        <div class="clear">
+        </div>
+      </h1>
+      
+      <div id="extra-options" class="btn-group btn-top-nav-controls">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+          Account                        
+          <span class="caret">
+          </span>
+        </button>
+        <ul class="dropdown-menu pull-left" role="menu">
+          <li>
+            <a href="employers/settings.html">
+              <span class="glyphicon glyphicon-cog">
+              </span>
+              Settings                            
+            </a>
+          </li>
+          <li>
+            <a href="#logout">
+              <span class="glyphicon glyphicon-share">
+              </span>
+              Logout                            
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <ul id="main-nav" class="clearfix">
+        
+        <li id="first-nav-item">
+          <a href="employers.html">
+            <span class="inner">
+              home
+            </span>
+          </a>
+        </li>
+        <li class="selected">
+          <a href="employees.html">
+            <span class="inner">
+              employees
+            </span>
+          </a>
+          
+        </li>
+        <li >
+          <a href="schedules.html">
+            <span class="inner">
+              schedules
+            </span>
+          </a>
+        </li>
+
+
+        <li >
+          <a href="reports.html">
+            <span class="inner">
+              reports
+            </span>
+          </a>
+          
+        </li>
+      </ul>
+      
+      <div class="clear">
+      </div>
+      
+    </div>
+  </div>
+  <!-- /#header -->
+			
+        <!-- content -->   
+		<div id="wrap">
+
+                        <div id="content" class="employers employees user-type-id-2 import">
+
+				
+						<h2 class="heading-with-button">
+            <span>Employees</span>
+                                            <a id="" href="add.html" class="btn btn-success ">
+    <span class="glyphicon glyphicon-plus"></span>
+    Add</a>
+<div class="clear"></div>                    </h2>
+			
+		<ul id="subnav" class="clearfix">
+			
+			<li  id="nav-employees-list">
+				<a href="employees.html">View</a>			</li>
+			
+				<li id="nav-employees-new" class="selected">
+                    					<a href="import.html">Import</a>				</li>
+			    
+			
+                        <li id="nav-employees-roles" >
+                 <a href="roles.html">Roles</a>            </li>
+
+			
+		</ul>
+		
+
+
+	<form action="#submit" enctype="multipart/form-data" class="import-emps" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>    <ol>
+        <li class="clearfix">
+            <label for="EmployerCsv">Csv</label><input type="file" name="data[Employer][csv]"  id="EmployerCsv"/>        </li>
+    </ol>
+	<div class="submit"><input  class="btn btn-success" type="submit" value="Import"/></div>	</form>
+	
+
+
+        <script type="text/javascript">
+    $(function(){
+        function format(role) {
+            return '<div class="role-style-' + role.id + ' emp-role-tag role-style">' + role.text + '</div>';
+        }
+        $('select.emp-roles').select2({
+            formatResult: format,
+            formatSelection: format
+        });
+    });
+</script>        <script type="text/javascript">
+            $(function(){
+                $('.emp-tabs').tabs({
+                    create: function(){
+                        $(this).show();
+                    }
+                });
+                $('select[name="data[GroupsUser][schedule_type_id]"]').select2();
+                $('select[name="data[GroupsUser][group_id]"]').select2();
+
+                $('.unselect-all-locations, .select-all-locations').click(function(){
+                    var $select = $(this).parents('li').eq(0).find('select');
+                    if(~this.className.indexOf('unselect')){
+                        $select.select2('destroy').find('option').prop('selected', false).end().select2()
+                    } else {
+                        $select.select2('destroy').find('option').prop('selected', 'selected').end().select2()
+                    }
+                    return false;
+                });
+            });
+        </script>
+
+
+                
+                 <div id="footer">
+          &copy; NSC 15
+        </div>
+        <!-- /#footer -->
+        
+        
+      </div>
+      <!-- /#content -->
+    </div>
+    <!-- /#wrap -->
+    
+    <script type="text/javascript" src="vendors/bootstrap/bootstrap.mindf05.js?c=build-169">
+    </script>
+  </body>
+</html>

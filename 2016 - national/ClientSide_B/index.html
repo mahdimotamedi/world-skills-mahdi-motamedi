@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="US-en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<title>Olympic Race - Brazil 2016</title>
+</head>
+<body>
+	<!-- START -->
+	<div id="start">
+		<div class="box">
+			<h3>Welcome!</h3>
+			<p>
+				Mahdi Motamedi (<a href="http://mmpg.ir" target="_blank">mmpg.ir</a>) presents...
+			</p>
+			<p>
+				Welcome to the Olympic Race!, In  this game you will visit many beautiful places from Brazil!
+			</p>
+			<p>
+				You must use the keys <strong>"UP"</strong> and <strong>"DOWN"</strong> to change the runway
+			</p>
+			<p>
+				You must use the <strong>"SPACE"</strong> button to jump
+			</p>
+			<p>
+				Your goal is to reach the end of the ride, dodging all the obstacles (jumping or changing the runway)
+			</p>	
+			<form action="#" method="post" >
+				<button type="submit" class='btn btn-start' id="startButton" onclick="game.start(); return false;">START</button>
+			</form>
+		</div>
+	</div><!-- END START -->
+
+	<!-- END -->
+	<div id="end" class="hide">
+		<div class="box">
+			<div class="error">
+				<h3>Game Over</h3>
+				<p>You didn't visited all the places... try again!</p>
+			</div>
+			<div class="success">
+				<h3>Welcome to the Rio 2016 – Olympic Games!</h3>
+				<p>You already visited beautifuls places from BRAZIL!</p>
+				<p>You can visit again pressing the Restart Button!</p>
+			</div>
+			<form action="#" method="post" >
+				<button type="submit" class='btn btn-start' id="restartButton" onclick="game.restart(); return false;">RESTART</button>
+			</form>
+		</div>
+	</div><!-- END END -->
+
+	<!--  GAME -->
+	<section id="game">
+		<!-- POINTS -->
+		<div id="points">
+			
+			<!-- INIT -->
+			<section id="init">
+				<img src="imgs/sky.svg" alt="sky" />
+			</section><!-- END INIT -->
+
+			
+			<!-- AMAZON -->
+			<section id="amazon">
+				<img src="imgs/amazon.svg" alt="amazon" />
+			</section><!-- END AMAZON -->
+
+			
+			<!-- BAHIA -->
+			<section id="bahia">
+				<img src="imgs/bahia.svg" alt="bahia" />
+			</section><!-- END BAHIA -->
+
+			
+			<!-- PARANA -->
+			<section id="parana">
+				<img src="imgs/parana.svg" alt="parana" />
+			</section><!-- END PARANA -->
+
+			
+			<!-- SAOPAULO -->
+			<section id="saopaulo">
+				<img src="imgs/saopaulo.svg" alt="saopaulo" />
+			</section><!-- END SAOPAULO -->
+
+			
+			<!-- RIO -->
+			<section id="rio">
+				<img src="imgs/rio.svg" alt="rio" />
+			</section><!-- END RIO -->
+
+		</div><!-- END POINTS -->
+
+		<!-- PYRE -->
+		<section id="pyre">
+			<img src="imgs/pyre.svg" alt="pyre" />
+			<div class="panel">
+				Olympic Games – Rio 2016
+			</div>
+		</section><!-- END PYRE -->
+
+		<!-- PLAYGROUND -->
+		<div id="playground">
+			<!-- PANELS -->
+			<div id="panels">
+				<h4 id="amazonPanel" class="panel" data-show="0">Amazon Forest – Manaus – AM</h4>
+				<h4 id="bahiaPanel" class="panel" data-show="0">Lacerda Elevator – Salvador – BA</h4>
+				<h4 id="paranaPanel" class="panel" data-show="0">Iguaçu Falls  – Foz do Iguaçu – PR</h4>
+				<h4 id="saopauloPanel" class="panel" data-show="0">Cable Stayed Bridge – São Paulo – SP</h4>
+				<h4 id="rioPanel" class="panel" data-show="0">Christ the Redeemer – Rio de Janeiro – RJ</h4>
+			</div><!-- END PANELS -->
+
+			<!-- RUNNER -->
+			<div id="runner">
+				<img src="imgs/runner/runner_1.png" alt="runner">
+			</div><!-- END RUNNER -->
+
+			<!-- RUNWAYS -->
+			<div id="runways" class="line2">
+				<div id="runway1" class="runway" data-way-number="1">
+					<!--<span class="obstacle"></span>-->
+				</div>
+				<div id="runway2" class="runway" data-way-number="2">
+					<!--<span class="obstacle"></span>-->
+				</div>
+				<div id="runway3" class="runway" data-way-number="3">
+					<!--<span class="obstacle"></span>-->
+				</div>
+			</div><!-- END RUNWAYS -->
+
+
+		</div><!-- END PLAYGROUND -->
+
+	</section><!--  END GAME -->
+	
+	<!-- SCRIPTS -->
+	<span class="scripts">
+		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+		<script type="text/javascript" src='js/jquery-ui.min.js'></script>
+		<script type="text/javascript" src='js/objects.js'></script>
+		<script type="text/javascript" src='js/script.js'></script>
+	</span>
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* reset styles */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    /*font-weight: normal;*/
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    line-height: 1;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+/* end reset styles */
+/* routine styles */
+.row {
+    clear: both;
+}
+
+.row .row {
+    margin: 0 -10px;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*input, select {
+    width: 100%;
+}*/
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.float_right {
+    float: right !important;
+}
+
+.no_pad_left {
+    padding-left: 0;
+}
+
+canvas {
+    width: 100%;
+}
+
+.spacer {
+    clear: both;
+}
+
+.full_width {
+    width: 100%;
+    float: left;
+}
+
+.hidden {
+    display: none;
+}
+/* end routine styles */
+/* fonts */
+@font-face {
+    font-family: DancingScript-Regular;
+    src: url("../fonts/Dancing_Script/DancingScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: DancingScript-Bold;
+    src: url("../fonts/Dancing_Script/DancingScript-Bold.ttf");
+}
+
+@font-face {
+    font-family: Vollkorn-Regular;
+    src: url("../fonts/Vollkorn/Vollkorn-Regular.ttf");
+}
+
+@font-face {
+    font-family: Vollkorn-Bold;
+    src: url("../fonts/Vollkorn/Vollkorn-Bold.ttf");
+}
+
+@font-face {
+    font-family: Vollkorn-BoldItalic;
+    src: url("../fonts/Vollkorn/Vollkorn-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: Vollkorn-Italic;
+    src: url("../fonts/Vollkorn/Vollkorn-Italic.ttf");
+}
+/* end fonts */

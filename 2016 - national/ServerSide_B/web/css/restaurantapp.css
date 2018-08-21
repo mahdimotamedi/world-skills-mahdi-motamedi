@@ -1,0 +1,17 @@
+body {
+    padding-bottom: 30px;
+}
+
+th {
+    vertical-align: top !important;
+    background-color: #f5f5f5;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover {
+    background-color: #f5f5f5;
+}
+
+.form-group.required label:after {
+    content: " *";
+}

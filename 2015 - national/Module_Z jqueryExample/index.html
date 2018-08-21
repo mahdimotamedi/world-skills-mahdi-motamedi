@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example for practice</title>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <style>
+        a {
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            cursor: move;
+        }
+
+        #itemsList {
+            overflow: scroll;
+            height: 200px;
+            position: fixed;
+            width: 100%;
+            border-top: 3px solid;
+            background: #fff;
+            bottom: 0;
+            z-index: 999999;
+            margin: 0;
+        }
+
+        #span_of_img {
+            height: 800px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p><input type="file" name="fileInput" id="fileInput"></p>
+    <p><input type="button" value="draw to canvas" onclick="draw_to_canvas()"></p>
+    <p><input type="button" value="export as jpeg" onclick="export_to_jpeg()"></p>
+    <p><input type="button" value="save page to localStorage" onclick="save()"></p>
+    <p><input type="button" value="clear localStorage" onclick="clear_save_data()"></p>
+    <p><input type="button" value="open list of saved files" onclick="open_saved_files_list()"></p>
+    <p><input type="button" value="close list of saved files" onclick="close_saved_files_list()"></p>
+
+    <hr>
+
+    <div id="span_of_img">
+        <img id="upload_image_span" src="">
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="functions.js"></script>
+    <script src="g.js"></script>
+
+    <p style="" id="itemsList">
+    </p>
+</body>
+</html>

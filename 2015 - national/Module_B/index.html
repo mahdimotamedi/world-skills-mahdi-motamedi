@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+	<meta charset="utf-8">
+	<title>ارزشیابی ماژول</title>		
+	<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+	<section id='container'>
+		<header>
+			<div id='logo'>
+				<img src='assets/logo.jpg' alt='worldskills' height='95' />
+			</div>
+			
+			<div id='time-display' data-seconds="300" data-interval>5:00</div>
+		</header>
+		
+		<section id='audio-items'>
+			<audio id='ending-theme'>
+				<source src="assets/sound_ending.wav">
+			</audio> 
+			<audio id='minute-beep'>
+				<source src="assets/sound_minute.wav">
+			</audio> 
+		</section>
+		
+		<section class='steps step-welcome' data-step="0">
+			<h1>ارزشیابی ماژول G</h1>
+			
+			<span class='description no_preview'>لطفا مشخصات خود را وارد کرده و برروی دکمه شروع کلیک نمایید.</span>
+			
+			<div class='box-input'>
+				<label for='expert_no'>شماره کارشناسی</label>
+				<input type='text' name='fld[]' id='expert_no' size='60'>
+			</div>
+			
+			<div class='box-input'>
+				<label for='expert_name'>نام و نام خانوادگی</label>
+				<input type='text' name='fld[]' id='expert_name' size='60'>
+			</div>
+
+			<span class="no_preview">
+				<input type='button' value='ادامه قبلی' onclick="continueFromLast()">
+				<input type='button' value='شروع' onclick="next_step()">
+			</span>
+
+		</section>
+		
+		<section class='steps step-1' data-step="1">
+			<h2>موارد اصلی (کمی)</h2>
+			<table class='item-list'>
+				<thead>
+					<tr>
+						<th>ردیف</th>
+						<th>عنوان</th>
+						<th>نمره</th>
+						<th>کسب شده</th>
+					</tr>
+				</thead>				
+				<tfoot>
+					<tr>
+						<th colspan='2'>مجموع</th>
+						<th>2</th>
+						<th>0</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>نمایش محل های خواسته شده در برنامه<span class='tooltip'>صف مشتریان، ماشین های برای فروش و تعداد صحیح آن ها ، صندوق دار ، مجموع فروش </span></td>
+						<td>1</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>کدهای جاوا اسکریپت بایستی دارای کامنت باشد.  <span class='tooltip'>حداقل 5 کامنت متفاوت</span></td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>یکسان بودن خروجی در هر دو مرورگر <span class='tooltip'>به ازای هر تفاوت 0.25 نمره .کسر نمره</span></td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class='steps step-2' data-step="2">
+			<h2>صف مشتریان</h2>
+			<table class='item-list'>
+				<thead>
+					<tr>
+						<th>ردیف</th>
+						<th>عنوان</th>
+						<th>نمره</th>
+						<th>کسب شده</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th colspan='2'>مجموع</th>
+						<th>5.75</th>
+						<th>0</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>توانایی انتقال مشتری  بعد از بازدید به صندوق</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>توانایی انتقال مشتری به خارج از سالن</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>حذف مشتری های موجود در بخش خروج از برنامه <span class='tooltip'>همراه با تغییر رنگ قرمز  0.25 نمره</span></td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>پرسش بله و خیر هنگام فروش خودرو از کاربر</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>به روز رسانی تعداد مشتری های پذیرش شده</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>بعد از جواب بله به فروش مجموع خودروهای فروش رفته افزایش یابد</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>بعد از جواب بله مبلغ مجموع افزایش یابد  </td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>مقادیر موجود در مجموع مشتریان سرویس داده شده و خودروهای فروخته شده و همچنین مبلغ کل بایستی با توابع آجاکس ذخیره گردد.</td>
+						<td>0.75</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>حذف مشتری از سیستم با انیمیشن باشد</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>حداکثر طول صف 10 مشتری است <span class='tooltip'>وقتی یک مشتری سرویس داده شد مشتری دیگر بتواند وارد صف شود</span></td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>فقط اولین مشتری قابل جابجایی باشد.</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section class='steps step-3' data-step="3">
+			<h2>فهرست خودروها</h2>
+			<table class='item-list'>
+				<thead>
+					<tr>
+						<th>ردیف</th>
+						<th>عنوان</th>
+						<th>نمره</th>
+						<th>کسب شده</th>
+					</tr>
+				</thead>				
+				<tfoot>
+					<tr>
+						<th colspan='2'>مجموع</th>
+						<th>3.25</th>
+						<th>0</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>بعد از فروخته شدن اتومبیل با نماد Sold مشخص شود <span class='tooltip'>خودرو دیگر قابل بازدید نباشد 0.25 نمره</span></td>
+						<td>0.75</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>مشتری به خودروی مورد نظر انتقال داده شده و همانجا بماند</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>مشتری که درخواست خودرو ناموجود می کند بتواند خودرو های موجود را ببیند</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>برگرداندن مشتری که اشتباه درگ شده به جای خود</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>خودروی که در حال بازدید است نباید توسط مشتری دیگری گرفته شود <span class='tooltip'>اگر خودروی دیگری به این محل کشیده شد باید بجای خود بازگردد</span></td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>خرید خودرو با افکت مناسب مشخص باشد.</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section class='steps step-4' data-step="4">
+			<h2>نمرات کیفی</h2>
+			<span class='description'>نمرات ورودی این بخش بین 1 تا 10 می باشد.</span>
+			<table class='item-list'>
+				<thead>
+					<tr>
+						<th>ردیف</th>
+						<th>عنوان</th>
+						<th>نمره</th>
+						<th>کسب شده</th>
+					</tr>
+				</thead>				
+				<tfoot>
+					<tr>
+						<th colspan='2'>مجموع</th>
+						<th>4</th>
+						<th>0</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>کیفیت و نحوه استفاده از تصاویر استفاده شده</td>
+						<td>1</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>حس دریافتی ار برنامه طراحی شده</td>
+						<td>1</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>بازخورد فعالیت های کاربر دقیق باشد.</td>
+						<td>1</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>کشیدن و رها کردن ها در هر دو مرورگر یکسان باشد</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>میزان قابل استفاده بودن برنامه</td>
+						<td>0.5</td>
+						<td><input type='text' name='fld[]' size='10'></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section id='controls'>
+			<input type='button' value='مرحله بعد' onclick="next_step()">
+			<input type='button' value='مرحله قبل' onclick="prev_step()">
+			<input type='button' value='پیش نمایش' onclick="preview()" id="preview_btn">
+			<input type='button' value='ثبت نهایی' onclick="finish_set()">
+		</section>
+	</section>
+	<script src="routines.js"></script>
+	<script src="functions.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

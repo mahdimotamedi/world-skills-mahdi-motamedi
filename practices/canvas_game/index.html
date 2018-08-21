@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accelerate Game</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body onload="startGame()">
+    <canvas id="game_canvas"></canvas>
+    <br>
+    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)"
+            ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)"
+            id="accelerate">ACCELERATE</button>
+    <button onclick="myGameArea.pause(); this.blur()" id="btnPause">PAUSE</button>
+    <button onclick="myGameArea.restart(); this.blur()">RESTART</button>
+
+    <p>Use the <strong>ACCELERATE button</strong> or <strong>SPACE key</strong> to stay in the air</p>
+    <p>How long can you stay alive?</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,378 @@
+<!doctype html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>کارشناسان</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/core.js"></script>
+</head>
+<body id="page-index" class="en">
+	<!-- header -->
+	<div id="header-wrap">
+		<div id="header">
+			<h1>
+				<img src="img/7s-logo-round.png"  class="profile-avatar company-logo" />
+				<div class="company-meta ">
+					<a href="experts.html">نام کاربر</a>
+					<div class="welcome-user">user@mail.ex</div>
+				</div>
+				<div class="clear">
+				</div>
+			</h1>
+			<div id="extra-options" class="btn-group btn-top-nav-controls">
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">مدیریت حساب                       
+				<span class="caret">
+				</span>
+				</button>
+				<ul class="dropdown-menu pull-left" role="menu">
+					<li>
+						<a href="#logout">
+						<span class="glyphicon glyphicon-share"></span> خروج                            
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul id="main-nav" class="clearfix">
+				<li id="first-nav-item">
+					<a href="index.html">
+					<span class="inner">صفحه نخست</span>
+					</a>
+				</li>
+				<li>
+					<a href="experts.html">
+					<span class="inner">کارشناسان</span>
+					</a>
+				</li>
+				<li>
+					<a href="groups.html">
+					<span class="inner">گروه‌های کاری</span>
+					</a>
+				</li>
+				<li class="selected">
+					<a href="schedules.html">
+					<span class="inner">زمانبندی</span>
+					</a>
+				</li>
+				<li >
+					<a href="#" class="backup">
+					<span class="inner">دریافت پشتیبان</span>
+					</a>
+				</li>
+			</ul>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!-- /#header -->
+	<!-- content -->   
+	<div id="wrap">
+		<div id="content" class="schedules index user-type-id-2">
+			<h2 class="heading-with-button">
+				<span>زمان بندی گروه های گروه</span>
+				<div class="clear"></div>
+			</h2>
+			<script type="text/javascript">
+				var is_shift_blocks = false;
+				
+				if (typeof(hideShow) == 'undefined') {
+				    hideShow = function () {
+				        alert(Shifts.Lang.get('schedules.try_again'));
+				    }
+				}
+			</script>
+			<form action="/save" class="no-bg" id="ScheduleSaveForm" method="post" accept-charset="utf-8">
+				<div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+				<input type="hidden" name="schedule_date" id="schedule-date" value="2014-04-06"/>
+				<div id="employers-overview">
+					<div id="notice-labor-costs">
+						<div id="notice-labor-costs-loader" class="grey-loader"></div>
+						<div id="notice-labor-costs-tallies" style="display:none;">
+							<span id="notice-hours"></span>
+							<span class="sep">|</span>
+							<span id="notice-labor"></span>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<table id="schedule-table">
+						<thead>
+							<!-- Name | Days of Week -->
+							<tr class="main-sched-heading">
+								<th class="th">عنوان گروه کاری</th>
+								<!-- تاریخ هر مورد از data-date گرفته می شود-->
+								<th class="th" data-date="2014-04-06">
+									Sunday
+									<div>April 6</div>
+								</th>
+								<th class="th" data-date="2014-04-07">
+									Monday
+									<div>April 7</div>
+								</th>
+								<th class="th" data-date="2014-04-08">
+									Tuesday
+									<div>April 8</div>
+								</th>
+								<th class="th" data-date="2014-04-09">
+									Wednesday
+									<div>April 9</div>
+								</th>
+								<th class="th" data-date="2014-04-10">
+									Thursday
+									<div>April 10</div>
+								</th>
+								<th class="th" data-date="2014-04-11">
+									Friday
+									<div>April 11</div>
+								</th>
+								<th class="th" data-date="2014-04-12">
+									Saturday
+									<div>April 12</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- گروه کاربری از data-group گرفته می شود -->
+							<tr class="row-user-id-" data-group="3">
+								<td class="name-col employee-notes">
+									<div class="name">تصحیح ماژول الف</div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							
+							<!-- گروه کاربری از data-group گرفته می شود -->
+							<tr class="row-user-id-" data-group="4">
+								<td class="name-col employee-notes">
+									<div class="name">تصحیح ماژول ب</div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							
+							<!-- گروه کاربری از data-group گرفته می شود -->
+							<tr class="row-user-id-" data-group="5">
+								<td class="name-col employee-notes">
+									<div class="name">تصحیح ماژول ج</div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							
+							<!-- گروه کاربری از data-group گرفته می شود -->
+							<tr class="row-user-id-" data-group="7">
+								<td class="name-col employee-notes">
+									<div class="name">تصحیح ماژول د</div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									
+									
+									<div class="xe"><div class="times"><a class="sched_anchors" href="#">3:30pm - 3:30pm</a><div class="clear"></div></div></div>
+									
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+								<td class="day">
+									<a class="btn btn-default add-shift" href="#" title="">
+									<span class="glyphicon glyphicon-plus"></span>
+									</a>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+			</form>
+			</div>
+		</div>
+		<!-- /#left -->
+		<div id="shift-trash">
+			<span class="glyphicon glyphicon-trash"></span>
+		</div>
+		<div id="day-graph-dialog" title="Day graph" style="display:none"></div>
+		<div id="time-overlay" class="rounded" style="display:none">
+			<div class="time-overlay-titlebar">
+				<div class="time-overlay-title"></div>
+				<a href="#" class="shift-cancel">x</a>
+				<div class="clear"></div>
+			</div>
+			<div class="inner">
+				<div class="shift-avail-content"></div>
+				<div class="time-bar-wrap">
+					<div class="time-bar-custom-inputs">
+						<input type="text" class="time-input start" placeholder="9am" value="12:00:00" />
+						<div class="arrow">&rarr;</div>
+						<input type="text" class="time-input end" placeholder="5:30pm" value="12:45:00" />
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="user-role-wrap"></div>
+				<input type="text" class="shift-notes" placeholder="Shift notes..."/>
+				<input type="button" class="shift-save btn btn-success" value="Save"/>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div id="notice-saving-shift" class="schedule-auto-saving">در حال دخیره سازی...</div>
+		<div id="footer">
+			&copy; پانزدهمین مسابقات ملی مهارت
+		</div>
+		<!-- /#footer -->
+	</div>
+	<!-- /#content -->
+	</div>
+	<!-- /#wrap -->
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/schedules.js"></script>
+	<script type="text/javascript" src="js/g.js"></script>
+</body>
+</html>
